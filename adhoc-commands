@@ -1,0 +1,7 @@
+nslookup <url/ip>
+
+ansible -i inventory-file mongodb -m ping -u centos --ask-pass
+ansible -i inventory-file mongodb -m ping -e ansible_user=centos -e ansible_password=DevOps321
+
+ansible -i inventory-file mongodb --become -m ping -e ansible_user=centos -e ansible_password=DevOps321 -m ansible.builtin.yum -a "name=nginx state=installed" 
+ansible -i inventory-file mongodb -b -m ping -e ansible_user=centos -e ansible_password=DevOps321 -m ansible.builtin.systemd -a "name=nginx state=started"
