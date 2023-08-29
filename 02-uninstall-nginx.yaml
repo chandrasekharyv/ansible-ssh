@@ -2,6 +2,7 @@
 
 - name: uninstall and stop the nginx
   hosts: mongodb
+  become: true
   tasks:
   - name: uninstall nginx
     ansible.builtin.yum:
