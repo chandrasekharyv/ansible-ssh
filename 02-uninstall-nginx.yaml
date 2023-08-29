@@ -1,0 +1,11 @@
+#uninstall nginx using yaml in ansible
+
+- name: uninstall and stop the nginx
+  hosts: mongodb
+  tasks:
+  - name: uninstall nginx
+    ansible.builtin.yum:
+      name: nginx
+      state: absent
+    
+   
