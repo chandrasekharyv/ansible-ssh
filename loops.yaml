@@ -11,3 +11,4 @@
     loop:
       - nginx
       - git
+      - postfix
