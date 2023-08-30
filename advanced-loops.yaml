@@ -8,5 +8,5 @@
         state: "{{item.state}}"
       loop:
       - {name: 'nginx', state: 'absent'}
-      - {name: 'git', state: 'present'}
+      - {name: 'git', state: 'absent'}
       - {name: 'docker', state: 'absent'}   
