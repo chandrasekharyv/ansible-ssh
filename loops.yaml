@@ -4,7 +4,7 @@
   hosts: localhost
   become: true
   tasks:
-  - name: install packages using loop
+  - name: install package
     ansible.builtin.ping:
       name: "{{item}}"
       state: installed
