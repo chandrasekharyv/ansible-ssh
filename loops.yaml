@@ -6,7 +6,7 @@
   tasks:
   - name: install packages using loop
     ansible.builtin.ping:
-      name: {{item}}
+      name: "{{item}}"
       state: installed
     loop:
       - nginx
