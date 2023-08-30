@@ -1,0 +1,13 @@
+#loops in ansible
+
+- name:
+  hosts: localhost
+  become: true
+  tasks:
+  - name: install packages using loop
+    ansible.builtin.ping:
+      name: {{item}}
+      state: installed
+    loop:
+      - nginx
+      - git

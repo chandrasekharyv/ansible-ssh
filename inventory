@@ -1,0 +1,6 @@
+#Inventory is s file which we can store group of ip adresses and urls
+
+[mongodb]
+172.31.35.252
+
+
