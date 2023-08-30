@@ -1,0 +1,12 @@
+- name: inastall and uninstall packages using loops
+  hosts: localhost
+  become: true
+  tasks:
+    - name: inastall and uninstall packages
+      ansible.builtin.yum:
+        name: "{{item.name}}"
+        state: "{{item.state}}"
+      loop:
+      - {name: 'nginx', state: 'absent'}
+      - {name: 'git', state: 'present'}
+      - {name: 'docker', state: 'absent'}   
