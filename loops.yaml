@@ -5,7 +5,7 @@
   become: true
   tasks:
   - name: install package
-    ansible.builtin.ping:
+    ansible.builtin.yum:
       name: "{{item}}"
       state: installed
     loop:
